@@ -1,7 +1,9 @@
 import { createDirectStore } from "direct-vuex";
+import ListingFeed from '@/models/ListingFeed';
 
 export interface State {
     counter: number;
+    feeds: ListingFeed[];
 }
 
 const {
@@ -12,23 +14,34 @@ const {
     moduleGetterContext
 } = createDirectStore({
     state: {
-        counter: 2
+        // TODO: Remove counter and associated code (its only here as an example)
+        counter: 2,
+        feeds: [],
     } as State,
     mutations: {
-        square(state: State) {
+        square(state) {
             console.log("square commit boii");
             state.counter = Math.pow(state.counter, 2);
         },
-        resetto(state: State) {
+        resetto(state) {
             console.log("square reset boii");
             state.counter = 2;
-        }
+        },
+        addFeed(state, feed: ListingFeed) {
+            // TODO: Call this as soon as a feed has been retrieved from IPFS/IPNS
+            console.log("new feed added");
+            state.feeds.push(feed);
+        },
     },
     actions: {
         doubleSquare(context) {
             const { commit } = rootActionContext(context);
             commit.square();
             commit.square();
+        },
+        getFeed(context, cid: string) {
+            // TODO: Retrieve feed from IPFS/IPNS. Preferably using async/await
+            // or some other form of concurrency pattern
         }
     },
     modules: {},

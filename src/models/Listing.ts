@@ -7,7 +7,7 @@ export interface ListingPicture {
     url: string;
 }
 
-export interface Listing {
+export default interface Listing {
     cid: string; // IPFS/IPNS Content ID
     uid: string; // Seller's public key
     title: string;

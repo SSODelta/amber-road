@@ -1,6 +1,6 @@
-import { Listing } from './Listing';
+import Listing from "./Listing";
 
-export interface ListingFeed {
+export default interface ListingFeed {
     cid: string; // IPFS/IPNS content ID
     name: string;
     items: Listing[];

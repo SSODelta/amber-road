@@ -11,25 +11,24 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import store from "@/store";
 
 export default defineComponent({
     name: "About",
     setup() {},
     methods: {
         square() {
-            store.commit.square();
+            this.$store.direct.commit.square();
         },
         reset() {
-            store.commit.resetto();
+            this.$store.direct.commit.resetto();
         },
         dblSquare() {
-            store.dispatch.doubleSquare();
+            this.$store.direct.dispatch.doubleSquare();
         }
     },
     computed: {
         counter() {
-            return store.state.counter;
+            return this.$store.state.counter;
         },
     }
 });
