@@ -30,6 +30,7 @@ const {
         addFeed(state, feed: ListingFeed) {
             // TODO: Call this as soon as a feed has been retrieved from IPFS/IPNS
             console.log("new feed added");
+            console.log(feed);
             state.feeds.push(feed);
         },
     },
@@ -42,7 +43,29 @@ const {
         getFeed(context, cid: string) {
             // TODO: Retrieve feed from IPFS/IPNS. Preferably using async/await
             // or some other form of concurrency pattern
-        }
+        },
+        testFeed(context) {
+            const { commit } = rootActionContext(context);
+            commit.addFeed({
+                cid: "asdf",
+                name: "my first feed",
+                items: [
+                    {
+                        cid: "asdf2",
+                        uid: "123",
+                        title: "hotdog",
+                        category: "food_and_drinks",
+                        description: "Yummy hotdog",
+                        pictures: [],
+                        price: 123,
+                        shipping: {
+                            countries:["Slovakia"],
+                            methods:["Sled"],
+                        },
+                    }
+                ]
+            });
+        },
     },
     modules: {},
 })

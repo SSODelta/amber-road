@@ -1,8 +1,5 @@
 <template>
-    <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </div>
+    <h1>Amber Road</h1>
     <router-view />
 </template>
 
@@ -12,7 +9,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
-    color: #2c3e50;
+    color: #222222;
+}
+
+h1 {
+    color: #6c4500;
 }
 
 #nav {
