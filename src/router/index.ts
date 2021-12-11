@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import List from "../views/List.vue";
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import Home from '../views/Home.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: "/",
-        name: "List",
-        component: List,
+        path: '/',
+        name: 'Home',
+        component: Home,
         // Lazy-loading example
         // component: () =>
         //     import(/* webpackChunkName: "about" */ "../views/List.vue"),
