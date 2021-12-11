@@ -1,6 +1,6 @@
 <template>
     <div class="listing">
-        {{ listing.name }}
+        {{ listing.title }}
     </div>
 </template>
 
@@ -10,7 +10,7 @@ import Listing from '../models/Listing';
 
 export default defineComponent({
     name: 'HelloWorld',
-    props: ['feed'],
+    props: ['listing'],
 });
 </script>
 
