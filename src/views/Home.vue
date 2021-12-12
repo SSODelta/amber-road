@@ -31,7 +31,6 @@ export default defineComponent({
     },
     mounted() {
         this.$store.direct.dispatch.testFeed();
-        this.$store.direct.dispatch.testListing();
     },
     methods: {
         count(thing: Map<string, ListingFeed>) {

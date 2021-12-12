@@ -1,6 +1,7 @@
 import { createDirectStore } from 'direct-vuex';
 import ListingFeed from '@/models/ListingFeed';
 import Listing from '@/models/Listing';
+import { downloadFile } from '@/mocking/fakeipfs';
 
 export interface State {
     feeds: Map<string, ListingFeed>;
@@ -20,47 +21,45 @@ const {
         listings: new Map<string, Listing>(),
     } as State,
     mutations: {
-        addFeed(state, newFeed: ListingFeed) {
+        addFeed(state, newFeed: { cid: string, data: ListingFeed }) {
             // TODO: Call this as soon as a feed has been retrieved from IPFS/IPNS
-            state.feeds.set(newFeed.cid, newFeed);
+            state.feeds.set(newFeed.cid, newFeed.data);
         },
-        addListing(state, newListing: Listing) {
+        addListing(state, newListing: { cid: string, data: Listing }) {
             // TODO: Call this as soon as a listing has been retrieved from IPFS/IPNS
-            state.listings.set(newListing.cid, newListing);
+            state.listings.set(newListing.cid, newListing.data);
         },
     },
     actions: {
-        getFeed(context, cid: string) {
+        async downloadFeed(context, cid: string) {
+            const { commit, dispatch } = rootActionContext(context);
             // TODO: Retrieve feed from IPFS/IPNS. Preferably using async/await
             // or some other form of concurrency pattern
+            // For now lets fake it
+            const rawData = await downloadFile(cid);
+            if (rawData) {
+                const newFeed = rawData as ListingFeed;
+                commit.addFeed({ cid: cid, data: newFeed });
+                // Download listings from feed
+                for (const itemCid of newFeed.items) {
+                    dispatch.downloadListing(itemCid);
+                }
+            } else {
+                console.warn('Could not find listing feed with CID', cid);
+            }
+        },
+        async downloadListing(context, cid: string) {
+            const { commit } = rootActionContext(context);
+            const rawData = await downloadFile(cid);
+            if (rawData) {
+                commit.addListing({ cid: cid, data: rawData as Listing });
+            } else {
+                console.warn('Could not find listing with CID', cid);
+            }
         },
         testFeed(context) {
-            const { commit } = rootActionContext(context);
-            commit.addFeed({
-                cid: 'asdf',
-                name: 'my first feed',
-                items: ['asdf2'] // Contains test listing
-            });
-        },
-        getListing(context, cid: string) {
-            // TODO: Retrieve feed from IPFS/IPNS. Preferably using async/await
-            // or some other form of concurrency pattern
-        },
-        testListing(context) {
-            const { commit } = rootActionContext(context);
-            commit.addListing({
-                cid: 'asdf2',
-                uid: '123',
-                title: 'hotdog',
-                category: 'food_and_drinks',
-                description: 'Yummy hotdog',
-                pictures: [],
-                price: 123,
-                shipping: {
-                    countries:['Slovakia'],
-                    methods:['Sled'],
-                },
-            });
+            const { dispatch } = rootActionContext(context);
+            dispatch.downloadFeed('asdf');
         },
     },
     modules: {},
