@@ -1,12 +1,12 @@
 # Amber Road
 **Amber Road** is a proof-of-concept fully decentralized marketplace. It supports electronic commerce without needing to trust any centralized entity, as is the case with e.g. Amazon/Alibaba/eBay. At its core, Amber Road is a smart contract for decentralized commerce. The contract keeps the payment in escrow until the trade has been completed and settles disputes by allowing parties to 'threaten' each other to invoke a blockchain oracle. In [1], Schwartzbach shows the contract is secure in a strong game-theoretic sense, assuming the oracle is better than chance; however, if the oracle is random, honesty remains an equilibrium. 
 
-In this repository, we have implemented the smart contract in Ethereum and provide this web application to interface with it. We use [IPFS](https://ipfs.io/), a decentralized data store, to store feeds and listings. The application allows for easy deployment of the smart contract on the Ethereum blockchain using [MetaMask](https://metamask.io/). In order to make full use of this service, you will 
+In this repository, we have implemented the smart contract in Ethereum and provide this web application to interface with it. We use [IPFS](https://ipfs.io/), a decentralized data store, to store feeds and listings. The application allows for easy deployment of the smart contract on the Ethereum blockchain using [MetaMask](https://metamask.io/). In order to make full use of this service, you will need to install MetaMask as well. 
 
-[1] Nikolaj I. Schwartzbach. An Incentive-Compatible Smart Contract for Decentralized Commerce. in 2021 IEEE International Conference on Blockchain and Cryptocurrency, 2021. Link: https://ieeexplore.ieee.org/document/9461077
+[1] Nikolaj I. Schwartzbach. An Incentive-Compatible Smart Contract for Decentralized Commerce. in 2021 IEEE International Conference on Blockchain and Cryptocurrency, 2021. Link: https://ieeexplore.ieee.org/document/9461077.
 
 ### Disclaimer
-The developers of this repository accept no responsibility for 
+The developers of this repository accept no responsibility for use of this application; we are not storing or processing any data from use of this application. It is essentially a client app that makes use of decentralized services for storage of data. We cannot control how this application is used.
 
 ## How to Install
 * **Clone project**. Start by cloning the present project to your file system.
@@ -19,7 +19,7 @@ The developers of this repository accept no responsibility for
 
 * **Install IPFS**. To interface with the decentralized data store, it is useful to run an IPFS node. You can also access the IPFS network through a gateway, though this is not recommended for security reasons. To install, follow the instruction [on the following link](https://docs.ipfs.io/install/ipfs-desktop/).
 
-* **Install MetaMask**. 
+* **Install MetaMask**. To deploy the smart contract, you will need to run MetaMask. Go to [this web site](https://metamask.io/download.html) and install as an extension for your favorite browser.
 
 Once you have completed the installation, you can run a local instance of the server by calling `npm run serve`.
 
