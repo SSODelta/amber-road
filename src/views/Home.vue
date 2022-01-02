@@ -9,11 +9,13 @@
     </div>
     <div class="listing-list">
         <h4>{{ count(listings) }} listing(s)</h4>
-        <ListingComponent
-            v-for="cid of listings.keys()"
-            v-bind:key="cid"
-            v-bind:listing="listings.get(cid)"
-        />
+        <table>
+            <ListingComponent
+                v-for="cid of listings.keys()"
+                v-bind:key="cid"
+                v-bind:listing="listings.get(cid)"
+            />
+        </table>
     </div>
 </template>
 

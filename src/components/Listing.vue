@@ -1,7 +1,18 @@
 <template>
-    <div class="listing">
-        {{ listing.title }}
-    </div>
+    <tr>
+        <td>
+            <img v-bind:src="listing.pictures[0]" width=200 height=225>
+        </td>
+        <td>
+            <h3>{{ listing.title }}</h3>
+            <u>{{ listing.price }} µETH (approx. {{ Number(listing.price * 3.7).toFixed(1) }}$)</u>
+            <hr>
+            {{listing.description}}<br><br>
+            Ships to: {{ listing.shipping.countries.join(", ") }}<br>
+            Shipping methods: {{ listing.shipping.methods.join(", ") }}<br><br>
+            <button onclick="gotcha!">Buy now</button>
+        </td>
+    </tr>
 </template>
 
 <script lang="ts">

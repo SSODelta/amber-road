@@ -1,0 +1,31 @@
+{
+    "name": "Jimmy's Bangin' Burger Joint",
+    "categories": ["food","drink"],
+    "listings": 
+    [
+        {
+            "uid":          "1",
+            "title":        "Cool Ranch Hotdog (LIMITED EDITION)",
+            "categories":   "food",
+            "description":  "Buy 2, get an extra for free. I'm telling ya, these hotdogs ain't messing around.",
+            "pictures":     ["https://i1.wp.com/tarasmulticulturaltable.com/wp-content/uploads/2019/10/Ristet-Hotdog-5-of-7.jpg?resize=1024%2C683&ssl=1"],
+            "price":        0.99,
+            "shipping": {
+                "countries": ["Slovakia"],
+                "methods":   ["Sled"]
+            }
+        },
+        {
+            "uid":          "123",
+            "title":        "Hot dang burger w/ fries",
+            "categories":   "food",
+            "description":  "Great borger to eat and enjoy. See my website http://hot.borger/ for more contents.",
+            "pictures":     ["https://upload.wikimedia.org/wikipedia/commons/4/47/Hamburger_%28black_bg%29.jpg"],
+            "price":        2.49,
+            "shipping": {
+                "countries": ["Slovakia"],
+                "methods": ["Sled Plus"]
+            }
+        }
+    ]
+}

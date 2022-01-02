@@ -18,6 +18,8 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #222222;
+    max-width: 1000px;
+    margin: auto;
 }
 
 #header {
@@ -32,7 +34,16 @@ body {
     color: #af8900;
 }
 
+img{
+    object-fit: contain;
+    border: 1px solid;
+}
+
 h1 {
     color: #6c4500;
+}
+
+table td, table tr {
+    vertical-align: top;
 }
 </style>
