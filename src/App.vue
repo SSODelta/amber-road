@@ -1,6 +1,6 @@
 <template>
     <div id="header">
-        <h1>Amber Road</h1>
+        <h1><img src="amber.png" width=32 height=32> Amber Road</h1>
     </div>
     <div id="content">
         <router-view />

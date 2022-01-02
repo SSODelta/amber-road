@@ -1,6 +1,6 @@
 <template>
     <div class="feed-list">
-        <h4>{{ count(feeds) }} feed(s)</h4>
+        <h4>{{ count(feeds) }} feed{{count(feeds)>1?"s":""}}</h4>
         <ListingFeedComponent
             v-for="cid of feeds.keys()"
             v-bind:key="cid"
@@ -8,7 +8,7 @@
         />
     </div>
     <div class="listing-list">
-        <h4>{{ count(listings) }} listing(s)</h4>
+        <h4>{{ count(listings) }} listing{{count(listings)>1?"s":""}}</h4>
         <table>
             <ListingComponent
                 v-for="cid of listings.keys()"
