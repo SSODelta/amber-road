@@ -17,7 +17,23 @@ Rough road map of development:
 * Establish back end connection to IPFS
 * Design front end prototype
 * Coin-toss smart contract integration
+* Review system for listings
 * Experiments
 * Revaluate front end
 * Integration with Kleros or Chainlink
 * Social media (produce video)
+
+## Frontend
+Selected tasks needed for the frontend:
+* Display listings in list
+* Add pages to listings
+* Add/remove feeds
+* Cookies to remember feeds
+* Choose gateway (local, remote)
+
+## Backend
+Selected tasks needed for the backend:
+* Load raw listings from IPFS
+* Implement hyperreferences in IPFS for listings
+* Implement -=- for feeds
+* System for storing reviews
