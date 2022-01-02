@@ -43,6 +43,7 @@ Selected tasks needed for the frontend:
 * Add pages to listings
 * Add/remove feeds
 * Filter by categories
+* Automatic conversion between different currencies
 * Cookies to remember feeds
 * Choose gateway (local, remote)
 
