@@ -42,6 +42,7 @@ Selected tasks needed for the frontend:
 * Display listings in list
 * Add pages to listings
 * Add/remove feeds
+* Filter by categories
 * Cookies to remember feeds
 * Choose gateway (local, remote)
 
