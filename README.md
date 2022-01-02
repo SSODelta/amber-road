@@ -3,7 +3,7 @@
 
 In this repository, we have implemented the smart contract in Ethereum and provide this web application to interface with it. We use [IPFS](https://ipfs.io/), a decentralized data store, to store feeds and listings. The application allows for easy deployment of the smart contract on the Ethereum blockchain using [MetaMask](https://metamask.io/). In order to make full use of this service, you will need to install MetaMask as well. The blockchain oracle is implemented using [Kleros](https://kleros.io/), a decentralized arbitration system on the Ethereum blockchain.
 
-[1] Nikolaj I. Schwartzbach. An Incentive-Compatible Smart Contract for Decentralized Commerce. in 2021 IEEE International Conference on Blockchain and Cryptocurrency, 2021. Link: https://ieeexplore.ieee.org/document/9461077.
+[1] Nikolaj I. Schwartzbach. An Incentive-Compatible Smart Contract for Decentralized Commerce. In *2021 IEEE International Conference on Blockchain and Cryptocurrency*, 2021. Link: https://ieeexplore.ieee.org/document/9461077.
 
 ### Disclaimer
 The developers of this repository accept no responsibility for use of this application; we are not storing or processing any data from use of this application. It is essentially a client app that makes use of decentralized services for storage of data. We cannot control how this application is used.
