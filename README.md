@@ -8,7 +8,7 @@
 
 * **Install Vue**. After installing node 16, go to the project directory. Then call `npm install` to install Vue.
 
-* **Install IPFS**. To interface with the decentralized data store, it is useful to run an IPFS node. To install, follow the instruction on the following link.
+* **Install IPFS**. To interface with the decentralized data store, it is useful to run an IPFS node. To install, follow the instruction [on the following link](https://docs.ipfs.io/install/ipfs-desktop/).
 
 Once you have completed the installation, you can run a local instance of the server by calling `npm run serve`.
 
