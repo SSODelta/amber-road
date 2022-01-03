@@ -1,6 +1,6 @@
 <template>
     <div id="header">
-        <h1><img src="amber.png" width=32 height=32> Amber Road</h1>
+        <h1><img src="amber.png" width=32 height=32 style="border:none;"> Amber Road</h1>
     </div>
     <div id="content">
         <router-view />
@@ -8,9 +8,14 @@
 </template>
 
 <style lang="scss">
+html, body {
+    height: 100%;
+}
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(to top, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 1.2)),url('/amber_bg.jpeg');
+    background-size: cover;
 }
 
 #app {
@@ -20,6 +25,16 @@ body {
     color: #222222;
     max-width: 1000px;
     margin: auto;
+}
+
+.feed-list, .listing-list{
+    padding: 5px;
+}
+
+#content{
+    height: 950px;
+    padding: 5px;
+    background-color: #eeeeee;
 }
 
 #header {
@@ -37,6 +52,7 @@ body {
 img{
     object-fit: contain;
     border: 1px solid;
+    margin-left: 5px;
 }
 
 h1 {

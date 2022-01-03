@@ -15,5 +15,6 @@ export default interface Listing {
     description: string;
     pictures: ListingPicture[];
     price: number;
+    currency: string;
     shipping: ShippingInfo;
 }

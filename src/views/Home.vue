@@ -8,7 +8,6 @@
         />
     </div>
     <div class="listing-list">
-        <h4>{{ count(listings) }} listing{{count(listings)>1?"s":""}}</h4>
         <table>
             <ListingComponent
                 v-for="cid of listings.keys()"

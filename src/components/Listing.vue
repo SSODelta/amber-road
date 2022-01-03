@@ -5,7 +5,7 @@
         </td>
         <td>
             <h3>{{ listing.title }}</h3>
-            <u>{{ listing.price }} µETH (approx. {{ Number(listing.price * 3.7).toFixed(1) }}$)</u>
+            <u>{{ listing.price }} µETH</u>
             <hr>
             {{listing.description}}<br><br>
             Ships to: {{ listing.shipping.countries.join(", ") }}<br>
